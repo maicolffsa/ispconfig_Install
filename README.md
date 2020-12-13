@@ -9,7 +9,7 @@ Subscribe to our newsletter to receive information about new version of the scri
 The link is here: http://eepurl.com/cAzq95
 We'll use only to inform you on new version of the script :)
 
-en este script se corrige el problema de conexion refusa al servidor de www.ispconfig.org 
+En este script se corrige el problema de conexion refusa al servidor de www.ispconfig.org 
 
 
 # Version #
