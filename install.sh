@@ -49,12 +49,12 @@ if [ "$TOTAL_PHYSICAL_MEM" -lt 524288 ]; then
 fi
 
 # Check connectivity
-echo -n "Checking internet connection... "
+# echo -n "Checking internet connection... "
 
-if ! ping -q -c 3 www.ispconfig.org > /dev/null 2>&1; then
-	echo -e "${red}Error: Could not reach www.ispconfig.org, please check your internet connection and run this script again.${NC}" >&2
-	exit 1;
-fi
+# if ! ping -q -c 3 www.ispconfig.org > /dev/null 2>&1; then
+#	echo -e "${red}Error: Could not reach www.ispconfig.org, please check your internet connection and run this script again.${NC}" >&2
+#	exit 1;
+# fi
 
 echo -e "[${green}DONE${NC}]\n"
 
