@@ -228,7 +228,7 @@ if [ -n "$DISTRO" ]; then
 		exit 1
 	fi
 else
-	echo -e "Installing for this Linux Distribution: Debian10?"
+	echo -e "Installing for this Linux Distribution: debian10?"
 	# read -p "Is this correct? (y/n) " -n 1 -r
 	echo -n "Is this correct? (y/n) "
 	read -n 1 -r
