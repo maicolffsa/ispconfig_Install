@@ -228,18 +228,15 @@ if [ -n "$DISTRO" ]; then
 		exit 1
 	fi
 else
-	echo -e "Sorry but your System is not supported by this script, if you want your system supported " >&2
-	echo -e "open an issue on GitHub: https://github.com/servisys/ispconfig_setup/issues" >&2
-	if echo "$ID" | grep -iq 'debian\|raspbian\|ubuntu\|centos\|opensuse\|fedora'; then
-		echo -e "\nIt is possible that this script will work if you manually set the DISTRO variable to a version of $ID that is supported."
-	elif [ -n "$ID_LIKE" ] && echo "$ID_LIKE" | grep -iq 'debian\|raspbian\|ubuntu\|centos\|opensuse\|fedora'; then
-		echo -e "\nIt is possible that this script will work if you manually set the DISTRO variable to one of the related Linux distributions that is supported."
+	echo -e "Installing for this Linux Distribution: Debian10?"
+	# read -p "Is this correct? (y/n) " -n 1 -r
+	echo -n "Is this correct? (y/n) "
+	read -n 1 -r
+	echo -e "\n"    # (optional) move to a new line
+	RE='^[Yy]$'
+	if [[ ! $REPLY =~ $RE ]]; then
+		exit 1
 	fi
-	if echo "$ID" | grep -iq "opensuse"; then
-		echo -e "\nYou can use the script here temporary: https://gist.github.com/jniltinho/7734f4879c4469b9a47f3d3eb4ff0bfb"
-		echo -e "Adjust it accordingly for your version of $ID and this issue: https://git.ispconfig.org/ispconfig/ispconfig3/issues/5074."
-	fi
-	exit 1
 fi
 
 RE='^.*[^[:space:]]+.*$'
