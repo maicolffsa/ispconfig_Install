@@ -30,15 +30,28 @@ Follow one of the above guides to install a fresh copy of a supported Linux dist
 
 Run the following command as root user:
 
-* Debian/Raspbian 7, 8, 9 and 10 and Ubuntu 14.04, 15.10, 16.04, 16.10 and 18.04
+* Debian 7, 8, 9 and 10 and Ubuntu 14.04, 15.10, 16.04, 16.10 and 18.04
 
 ```shell
-cd /tmp; wget -O installer.tgz "https://github.com/maicolffsa/ispconfig_setup/tarball/master"; tar zxvf installer.tgz; cd *ispconfig*; bash install.sh
+cd /tmp; wget -O installer.tgz "https://github.com/maicolffsa/ispconfig_install/tarball/master"; tar zxvf installer.tgz; cd *ispconfig*; bash install.sh
 ```
+
+* Armbian 20.04
+
+```shell
+cd /tmp; wget -O installer.tgz "https://github.com/maicolffsa/ispconfig_install/tarball/master"; tar zxvf installer.tgz; cd *ispconfig*; bash installArmbian.sh
+```
+
+* Raspbian 20.04
+
+```shell
+cd /tmp; wget -O installer.tgz "https://github.com/maicolffsa/ispconfig_install/tarball/master"; tar zxvf installer.tgz; cd *ispconfig*; bash installRaspbian.sh
+```
+
 * CentOS 7
 
 ```shell
-cd /tmp; sudo yum install wget unzip net-tools; wget -O installer.tgz "https://github.com/maicolffsa/ispconfig_setup/tarball/master"; tar zxvf installer.tgz; cd *ispconfig*; sudo install.sh
+cd /tmp; sudo yum install wget unzip net-tools; wget -O installer.tgz "https://github.com/maicolffsa/ispconfig_install/tarball/master"; tar zxvf installer.tgz; cd *ispconfig*; sudo install.sh
 ```
 
 CentOS 7 is in a very early stage, we got to test a bit, any help will be appreciated. 
